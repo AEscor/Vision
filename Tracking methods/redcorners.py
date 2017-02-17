@@ -31,7 +31,8 @@ while(True):
     gray = np.float32(filt)
     corners = cv2.goodFeaturesToTrack(gray, 100, 0.01, 10)
     corners = np.int0(corners)
-    edges = cv2.Canny(frame, 100, 200)
+    gauss = cv2.GaussianBlur(frame, (5, 5), 0)
+    edges = cv2.Canny(gauss, 100, 200)
     res = cv2.bitwise_and(frame,frame, mask= filt)           #Toma del frame los pixeles encontrados por la mascara.
     contours, hierarchy = cv2.findContours(filt.copy(), 1, 2)#Busca en una copia de la mascara los bordes, crea matrices.
     co=0

@@ -15,8 +15,8 @@ Y = cap.get(4)
 
 print "ancho",X," alto",Y      # Imprime la resolucion obtenida por la camara
 
-template = cv2.imread("C:\pyprog\Trycam\img.png", 0)
-template2 = cv2.imread("C:\pyprog\Trycam\img2.png", 0)
+template = cv2.imread("C:\Users\Programmer-A\Documents\GitHub\Vision\Tracking methods\img.png", 0)
+template2 = cv2.imread("C:\Users\Programmer-A\Documents\GitHub\Vision\Tracking methods\img2.png", 0)
 cv2.namedWindow("ventana1")     # Crea ventanas para futura referencia
 cv2.imshow("template", template)
 cv2.imshow("template2", template2)
